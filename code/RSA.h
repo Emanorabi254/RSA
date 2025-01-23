@@ -12,7 +12,6 @@ unsigned int mod_exp(unsigned int base, unsigned int exp, unsigned int mod) {
         exp = exp >> 1;       // Right shift exponent (divide by 2)
         base = (base * base) % mod; // Square the base
     }
-
     return result;
 }
 
@@ -52,7 +51,7 @@ unsigned int find_e(unsigned int phi) {
     }
     return 0;  // Should never happen if phi > 2
 }
-// Extended Euclidean Algorithm to find modular inverse of e modulo phi(n)
+// Extended Euclidean Algorithm to find the modular inverse of e modulo phi(n)
 unsigned int mod_inverse(unsigned int e, unsigned int phi_n) {
     int t = 0, new_t = 1;
     int r = phi_n, new_r = e;
